@@ -6,22 +6,43 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "setup-sheets": "node scripts/setup-sheets.js",
+    "create-template": "node scripts/create-template.js",
+    "create-vocab": "node scripts/create-comprehensive-vocabulary.js",
+    "create-vocab-with-translation": "node scripts/create-vocabulary-with-translation.js",
+    "import-to-sheets": "node scripts/import-to-sheets.js",
+    "vocab-manager": "node scripts/vocabulary-manager.js",
+    "generate-icons": "node scripts/generate-app-icons.js",
+    "setup-assets": "node scripts/setup-app-assets.js",
+    "convert-assets": "node scripts/convert-svg-to-png.js",
+    "build:mobile": "next build && npx cap sync",
+    "open:ios": "npx cap open ios",
+    "open:android": "npx cap open android"
   },
   "dependencies": {
+    "@capacitor-community/admob": "^7.0.3",
+    "@capacitor-community/speech-recognition": "^7.0.1",
+    "@capacitor-community/text-to-speech": "^6.0.0",
+    "@capacitor/android": "^7.3.0",
+    "@capacitor/cli": "^7.3.0",
+    "@capacitor/core": "^7.3.0",
+    "@capacitor/ios": "^7.3.0",
+    "@google-cloud/speech": "^7.1.0",
+    "next": "15.3.3",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.3.3"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.3.3",
-    "@eslint/eslintrc": "^3"
+    "sharp": "^0.34.2",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }

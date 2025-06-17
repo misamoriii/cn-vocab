@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 中国語単語学習アプリ
 
-## Getting Started
+中国語学習者向けの単語学習Webアプリケーションです。HSKレベル別の単語をGoogleスプレッドシートから取得し、忘却曲線を活用した効率的な学習をサポートします。
 
-First, run the development server:
+## 主な機能
 
-```bash
+### 📚 学習機能
+- **4択問題形式**: 日本語から中国語（漢字・拼音）を選択
+- **忘却曲線ベース復習**: 5分→1時間→10時間→2日→1週間→1ヶ月の間隔で復習
+- **HSKレベル別学習**: HSK 1-6の各レベルに対応
+- **音声再生**: Web Speech APIによる中国語音声合成
+- **音声認識**: マイクを使った発音練習（Web Speech API）
+
+### ⚙️ カスタマイズ
+- **表示モード切替**: 拼音のみ/漢字のみ/両方表示
+- **学習進捗記録**: ローカルストレージで進捗を自動保存
+- **レスポンシブデザイン**: PC・スマートフォン対応
+
+### 📊 データ管理
+- **Googleスプレッドシート連携**: 単語データの一元管理
+- **自動優先度判定**: 復習が必要な単語を優先出題
+
+## 🚀 クイックスタート
+
+### 1. 依存関係のインストール
+\`\`\`bash
+npm install
+\`\`\`
+
+### 2. 単語データ作成
+\`\`\`bash
+# オプション1: 基本テンプレート（50単語）
+npm run create-template
+
+# オプション2: 包括的データ（223単語、HSK1-6全レベル）
+npm run create-vocab
+
+# オプション3: 対話式単語管理システム
+npm run vocab-manager
+\`\`\`
+
+### 3. Googleスプレッドシート設定
+1. [Google Sheets](https://sheets.google.com/)で新しいスプレッドシートを作成
+2. 生成されたCSVファイル（`comprehensive-vocabulary.csv`など）をインポート
+3. スプレッドシートを「リンクを知っている全員が閲覧できる」に設定
+4. URLからスプレッドシートIDをコピー
+
+### 4. Google Sheets API設定
+\`\`\`bash
+# 対話式セットアップツールを実行
+npm run setup-sheets
+\`\`\`
+
+このツールが以下を行います：
+- Google Cloud ConsoleでのAPI設定手順を案内
+- \`.env.local\`ファイルの自動作成
+- 接続テストの実行
+
+### 5. アプリ起動
+\`\`\`bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+\`\`\`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ブラウザで \`http://localhost:3000\` にアクセス
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📋 詳細セットアップガイド
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+詳しい手順は [SETUP_GUIDE.md](./SETUP_GUIDE.md) をご覧ください。
 
-## Learn More
+## 技術スタック
 
-To learn more about Next.js, take a look at the following resources:
+- **フレームワーク**: Next.js 15 (App Router)
+- **言語**: TypeScript
+- **スタイリング**: Tailwind CSS
+- **API**: Google Sheets API
+- **音声**: Web Speech API
+- **ストレージ**: localStorage
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 使用方法
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **初回起動**: 環境変数を設定後、アプリにアクセス
+2. **学習開始**: 表示された日本語の意味に対応する中国語を4択から選択
+3. **音声学習**: 
+   - 🔊ボタンで音声再生
+   - 🎤ボタンで発音練習
+4. **設定変更**: ⚙️ボタンで表示モードやHSKレベルを変更
+5. **進捗確認**: スコアと学習状況は自動保存
 
-## Deploy on Vercel
+## 学習アルゴリズム
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+忘却曲線に基づく復習スケジュール:
+- **正解**: 次回復習間隔を延長
+- **不正解**: 復習間隔を短縮（5分後に再出題）
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+復習間隔: 5分 → 1時間 → 10時間 → 2日 → 1週間 → 1ヶ月

@@ -1,0 +1,43 @@
+<svg width="2048" height="2048" viewBox="0 0 2048 2048" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="splashGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="0" stdDeviation="20" flood-color="#FFFFFF" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="2048" height="2048" fill="url(#splashGradient)"/>
+  
+  <!-- Main Logo Circle -->
+  <circle cx="1024" cy="900" r="300" fill="#FFFFFF" opacity="0.95" filter="url(#glow)"/>
+  
+  <!-- Chinese Character "学" -->
+  <text x="1024" y="1020" font-family="Arial, sans-serif" font-size="280" font-weight="bold" text-anchor="middle" fill="#2C3E50">学</text>
+  
+  <!-- App Title -->
+  <text x="1024" y="1350" font-family="Arial, sans-serif" font-size="120" font-weight="bold" text-anchor="middle" fill="#FFFFFF">CN Vocab</text>
+  <text x="1024" y="1450" font-family="Arial, sans-serif" font-size="60" font-weight="normal" text-anchor="middle" fill="#FFFFFF" opacity="0.8">中国語単語学習</text>
+  
+  <!-- Loading Animation Elements -->
+  <circle cx="900" cy="1600" r="8" fill="#FFFFFF" opacity="0.8">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite" begin="0s"/>
+  </circle>
+  <circle cx="1024" cy="1600" r="8" fill="#FFFFFF" opacity="0.8">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite" begin="0.5s"/>
+  </circle>
+  <circle cx="1148" cy="1600" r="8" fill="#FFFFFF" opacity="0.8">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite" begin="1s"/>
+  </circle>
+  
+  <!-- Decorative Pattern -->
+  <g opacity="0.1">
+    <circle cx="200" cy="200" r="40" fill="#FFFFFF"/>
+    <circle cx="1848" cy="300" r="30" fill="#FFFFFF"/>
+    <circle cx="100" cy="1800" r="25" fill="#FFFFFF"/>
+    <circle cx="1900" cy="1700" r="35" fill="#FFFFFF"/>
+  </g>
+</svg>

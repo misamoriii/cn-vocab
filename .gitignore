@@ -33,6 +33,13 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# generated template files (sample data)
+vocabulary-template.csv
+sample-vocabulary.csv
+comprehensive-vocabulary.csv
+custom-vocabulary.csv
+hsk*-vocabulary.csv
+
 # vercel
 .vercel
 
