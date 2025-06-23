@@ -1,0 +1,29 @@
+title: CN Vocab - 中国語単語学習アプリ
+description: HSKレベル別中国語語彙学習アプリ
+baseurl: ""
+url: "https://misamoriii.github.io"
+
+# GitHub Pages settings
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+include:
+  - README.md
+  - privacy-policy.html
+
+# Exclude files
+exclude:
+  - node_modules/
+  - android/
+  - ios/
+  - src/
+  - public/
+  - *.js
+  - *.json
+  - *.md
+  - *.ts
+  - *.tsx
+  - *.config.*
+  - package*.json
