@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CN Vocab - 中国語単語学習アプリ</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        h1 {
+            color: #2563eb;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.2em;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .feature {
+            padding: 20px;
+            background-color: #f8fafc;
+            border-radius: 10px;
+            border: 2px solid #e2e8f0;
+        }
+        .feature h3 {
+            color: #1e40af;
+            margin-bottom: 10px;
+        }
+        .links {
+            margin-top: 40px;
+        }
+        .link {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 10px;
+            background-color: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+        .link:hover {
+            background-color: #1d4ed8;
+        }
+        .link.secondary {
+            background-color: #64748b;
+        }
+        .link.secondary:hover {
+            background-color: #475569;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🇨🇳 CN Vocab</h1>
+        <div class="subtitle">中国語単語学習アプリ</div>
+        
+        <div class="features">
+            <div class="feature">
+                <h3>📚 HSK対応</h3>
+                <p>HSK 1-6級<br>全2400語収録</p>
+            </div>
+            <div class="feature">
+                <h3>🧠 効率学習</h3>
+                <p>スペース反復<br>学習システム</p>
+            </div>
+            <div class="feature">
+                <h3>🔒 プライバシー重視</h3>
+                <p>個人情報収集なし<br>安全な学習環境</p>
+            </div>
+        </div>
+        
+        <div class="links">
+            <a href="./privacy-policy.html" class="link">プライバシーポリシー</a>
+            <a href="https://github.com/misamoriii/cn-vocab" class="link secondary" target="_blank">GitHub</a>
+        </div>
+        
+        <p style="margin-top: 30px; color: #666; font-size: 0.9em;">
+            © 2025 CN Vocab Development Team
+        </p>
+    </div>
+</body>
+</html>
